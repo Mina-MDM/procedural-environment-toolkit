@@ -211,6 +211,8 @@ The **Procedural Rock Generator** exposes parameters for controlling rock shape,
 
 Controls the height of the internal base shape before procedural deformation.
 
+![Height_parameter](../Media/height.gif)
+
 #### Primary Noise Amplitude
 
 Controls the influence strength of the Primary Noise stage, which defines the overall rock silhouette.
