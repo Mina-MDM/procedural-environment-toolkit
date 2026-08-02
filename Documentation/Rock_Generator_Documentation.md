@@ -365,9 +365,7 @@ Three mesh outputs are generated at different stages of the procedural pipeline.
 
 ![Seed_variation](../Example/Variation.jpg)
 
-![Low/Mid/High_comparison](../Example/Variation.jpg)
-
-![Seed_variation](../Example/Outputs.jpg)
+![Low/Mid/High_comparison](../Example/Outputs.jpg)
 
 ![Pebble/Rock/Cliff](../Example/Scale.jpg)
 
