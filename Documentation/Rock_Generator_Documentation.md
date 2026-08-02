@@ -237,6 +237,8 @@ Enables automatic UV generation for the high poly output meshe.
 
 Disabling this option skips the UV generation stage and can significantly improve cook performance, for high poly output.
 
+![UV_parameter](../Media/uv.gif)
+
 ### Mesh Resolution
 
 #### High Poly Target Size
