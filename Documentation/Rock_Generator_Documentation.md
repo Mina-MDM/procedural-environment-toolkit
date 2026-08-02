@@ -91,6 +91,8 @@ The **Procedural Rock Generator** follows a sequential procedural pipeline:
 
 **Base Shape → Primary Noise → Fracture → Reconstruction → Mask Computation → Secondary Noise → Detail Noise → Mesh Outputs**
 
+![Break_down](../Media/Break_Down.gif)
+
 ### Base Shape
 
 Initializes the base geometry used as the foundation for the rock generation process.
@@ -110,6 +112,8 @@ Repositions the fractured pieces into a unified rock form before subsequent surf
 ### Mask Computation
 
 Generates the masks used to control subsequent detail generation.
+
+![Masks](../Media/Masks.gif)
 
 ### Secondary Noise
 
@@ -189,6 +193,8 @@ Output connectors:
 - mid_poly
 - high_poly
 
+![Outputs](../Media/Outputs.gif)
+
 #### Low Poly Output
 
 A lower polygon density version of the generated rock mesh.
@@ -204,6 +210,8 @@ A higher polygon density version of the generated rock mesh.
 ## Parameters
 
 The **Procedural Rock Generator** exposes parameters for controlling rock shape, procedural variation, surface detail, and mask influence.
+
+![Parameters](../Media/Parameters.jpg)
 
 ### Base Shape
 
@@ -235,13 +243,19 @@ Disabling this option skips the UV generation stage and can significantly improv
 
 Controls the target edge length used when generating the High Poly output mesh.
 
+![High_Poly_parameter](../Media/High_Poly.gif)
+
 #### Mid Poly Target Size
 
 Controls the target edge length used when generating the Mid Poly output mesh.
 
+![Mid_Poly_parameter](../Media/Mid_Poly.gif)
+
 #### Low Poly Target Size
 
 Controls the target edge length used when generating the Low Poly output mesh.
+
+![Low_Poly_parameter](../Media/Low_Poly.gif)
 
 ### Variations
 
@@ -251,15 +265,21 @@ Controls procedural variation by affecting noise and fracture variation during g
 
 Using the same Seed with the same parameter values always produces the same result.
 
+![Seed_parameter](../Media/Seed.gif)
+
 #### Transform Scale
 
 Controls the final scale of the generated rock after the procedural generation process.
+
+![Scale](../Media/Scale.gif)
 
 #### Pieces
 
 Controls the fracture point distribution used during the fracture stage. Changing this parameter regenerates the fracture pattern rather than modifying the existing fracture.
 
 **See:** [Generation Process → Fracture](#fracture-1)
+
+![Pieces](../Media/Pieces.gif)
 
 ### Secondary Details
 
@@ -271,6 +291,8 @@ Controls the influence strength of the Secondary Noise stage, which adds medium-
 
 Controls the element size of the Secondary Noise pattern.
 
+![Secondary_details_parameter](../Media/Secondary_details.gif)
+
 ### Fine Details
 
 #### Details Amplitude
@@ -281,6 +303,8 @@ Controls the influence strength of the Detail Noise stage, which adds fine-scale
 
 Controls the element size of the Detail Noise pattern.
 
+![Fine_details_parameter](../Media/Fine_details.gif)
+
 ### Noise Masks
 
 #### Height Ramp Mask
@@ -289,15 +313,21 @@ Controls the remapping curve applied to the computed height mask. The left side 
 
 **See:** [Generation Process → Mask Computation](#mask-computation-1)
 
+![Height_Mask_Ramp_parameter](../Media/Height_Mask.gif)
+
 #### Slope Ramp Mask
 
 Controls the remapping curve applied to the computed slope mask. The left side of the ramp represents steeper surfaces, while the right side represents flatter surfaces, affecting the influence of the Secondary Noise and Detail Noise stages.
 
 **See:** [Generation Process → Mask Computation](#mask-computation-1)
 
+![Slope_Mask_parameter](../Media/Slope_Mask.gif)
+
 ## Generation Process
 
 The **Procedural Rock Generator** creates rock geometry through a progressive procedural process that combines shape deformation, fracture processing, mask-based detail control, and final mesh generation.
+
+![Node_Graph](../Media/Node_Graph.jpg)
 
 ### Base Shape Generation
 
