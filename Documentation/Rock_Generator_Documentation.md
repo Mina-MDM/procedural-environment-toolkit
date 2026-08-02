@@ -221,6 +221,8 @@ Controls the influence strength of the Primary Noise stage, which defines the ov
 
 Controls the element size of the Primary Noise pattern.
 
+![Primary_Noise_parameter](../Media/Primary_Noise.gif)
+
 #### High Poly UV Generation
 
 Enables automatic UV generation for the high poly output meshe.
