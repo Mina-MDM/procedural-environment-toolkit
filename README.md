@@ -1,134 +1,172 @@
-# Procedural Rock Generator
+# Procedural Mini Environment Tools
 
-A Houdini Digital Asset (HDA) for generating procedural rock variations through a parameter-driven workflow.
+A collection of procedural environment tools and experiments developed in Houdini as part of my learning path toward technical environment design.
 
-The asset creates unique rock meshes using layered procedural noise, fracture processing, and procedural masking while giving artists full control over the overall rock shape.
+The repository explores procedural modeling, attribute-driven workflows, surface distribution, curve-based generation, and the integration of individual tools into a small procedural environment.
+
+<!-- IMAGE: HERO
+Add a wide overview image here showing the Mini Environment and/or the three main tools.
+Recommended: 1600–2000 px wide.
+Example:
+![Procedural Mini Environment Overview](images/hero.jpg)
+-->
+
+## Projects
+
+### Rock Generator
+
+A procedural rock generation tool focused on controllable shape variation and layered noise deformation.
+
+**Main topics:**
+
+- Procedural shape generation
+- Layered noise
+- Attribute-driven deformation
+- Seed-based variation
+- HDA parameterization
+
+<!-- IMAGE: ROCK PREVIEW
+Add a representative image or GIF of the Rock Generator here.
+
+Example:
+![Rock Generator](images/rock-generator.jpg)
+-->
+
+[View Rock Generator →](./rock-generator)
 
 ---
 
-## Preview
+### Surface Scatter
 
-<p align="center">
-  <img src="Example/Example.jpg" width="900">
-</p>
+A procedural surface scattering tool designed to distribute geometry based on surface properties and user-defined controls.
 
-<p align="center">
-  <img src="Media/Seed.gif" width="900">
-</p>
+**Main topics:**
+
+- Point generation
+- Density control
+- Attribute-driven distribution
+- Scale and orientation variation
+- Surface-aware scattering
+
+<!-- IMAGE: SCATTER PREVIEW
+Add a representative image or GIF of the Surface Scatter tool here.
+
+Example:
+![Surface Scatter](images/surface-scatter.gif)
+-->
+
+[View Surface Scatter →](./surface-scatter)
+
+---
+
+### Curved Base Road
+
+A curve-based procedural road tool for generating road geometry from user-defined curves.
+
+**Main topics:**
+
+- Curve processing
+- Resampling
+- Width control
+- Curve-based geometry generation
+- Terrain interaction
+
+<!-- IMAGE: ROAD PREVIEW
+Add a representative image or GIF of the Curved Base Road tool here.
+
+Example:
+![Curved Base Road](images/curved-road.jpg)
+-->
+
+[View Curved Base Road →](./curved-road)
 
 ---
 
-## Features
+### Mini Environment
 
-- Procedural rock generation
-- Seed-based variations
-- Layered noise workflow
-- Height & slope mask controls
-- Curve-based mask remapping
-- Adjustable fracture generation
-- Automatic UV generation (High Poly)
-- Three output resolutions:
-  - Low Poly
-  - Mid Poly
-  - High Poly
+A small procedural environment created by combining the tools above into a shared workflow.
+
+The purpose of this project is to explore how individual procedural tools can work together as part of a larger environment-generation system.
+
+**Main topics:**
+
+- Tool integration
+- Attribute flow
+- Procedural relationships
+- Environment assembly
+- Reusable workflows
+
+<!-- IMAGE: MINI ENVIRONMENT PREVIEW
+Add the strongest final view of the Mini Environment here.
+
+Example:
+![Mini Environment](images/mini-environment.jpg)
+-->
+
+[View Mini Environment →](./mini-environment)
 
 ---
+
+## Learning Focus
+
+This repository was developed as a practical learning project rather than as a collection of isolated tutorials.
+
+The main areas explored throughout the projects are:
+
+- Procedural modeling
+- Houdini Digital Assets (HDA)
+- Attribute-driven systems
+- VEX fundamentals
+- Procedural environment workflows
+- Tool design and parameterization
+- System integration
+
+The projects increase gradually in complexity, moving from isolated procedural tools toward a small integrated environment system.
+
+<!-- IMAGE: LEARNING / WORKFLOW DIAGRAM
+Optional: Add a simple diagram showing the progression from individual tools to the integrated environment.
+
+Example:
+![Learning Progression](images/workflow-diagram.png)
+-->
 
 ## Workflow
 
-```
-Base Shape
-      ↓
-Primary Noise
-      ↓
-Fracture
-      ↓
-Reconstruction
-      ↓
-Mask Generation
-      ↓
-Secondary Noise
-      ↓
-Detail Noise
-      ↓
-Mesh Outputs
+The general progression of the repository is:
+
+```text
+Procedural Asset Generation
+          ↓
+Surface Distribution
+          ↓
+Curve-Based Generation
+          ↓
+Tool Integration
+          ↓
+Mini Procedural Environment
 ```
 
----
+<!-- IMAGE: WORKFLOW DIAGRAM
+Optional alternative to the text diagram above.
+-->
 
-## Installation
+## Software
 
-1. Download the `.hdanc` file.
-2. In Houdini select:
+- Houdini 20.0.547
+- Unreal Engine 5.2.1 — used for integration testing where applicable
 
-```
-Assets → Install Asset Library...
-```
+## Project Status
 
-3. Choose the downloaded asset.
-4. Click **Install**.
+The tools in this repository were developed as part of an ongoing learning process.
 
----
-
-## Requirements
-
-- Houdini FX 20.0.547
-- Houdini Apprentice or higher
-
-> **Note:** This asset was created using **Houdini Apprentice** and is distributed as a **non-commercial (.hdanc)** asset. Opening or saving commercial Houdini projects with this asset may convert them to non-commercial.
-
----
-
-## Quick Start
-
-1. Create the HDA inside a Geometry network.
-2. Adjust **Height** and **Primary Noise**.
-3. Change the **Seed** to generate new rocks.
-4. Export one of the available outputs:
-   - Low Poly
-   - Mid Poly
-   - High Poly
-
----
-
-## Documentation
-
-Complete documentation is available here:
-
-**Documentation/Rock_Generator_Documentation.md**
-
----
-
-## Unreal Engine
-
-The generated meshes can be exported as FBX and imported into Unreal Engine as Static Meshes.
-
-- Nanite compatible
-- Collision should be generated inside Unreal Engine
-- LODs are not generated automatically
-
----
-
-## Roadmap
-
-Planned features:
-
-- Automatic LOD generation
-- Collision generation
-- Material presets
-- Biome presets
-- Nanite optimization
-
----
+Some features and integrations are still being refined as part of future iterations.
 
 ## License
 
-This project is released for **non-commercial, educational, and personal use**.
+These tools are provided for non-commercial, educational, and personal use.
 
-The asset is distributed as a **.hdanc** file created with **Houdini Apprentice**.
+Please refer to the individual project documentation for additional information.
 
----
+## About
 
-## Author
-
-**Mina D.**
+This repository documents an early stage of my journey toward becoming a Technical Environment Artist, with a focus on procedural design, Houdini, Unreal Engine, and scalable environment systems.
