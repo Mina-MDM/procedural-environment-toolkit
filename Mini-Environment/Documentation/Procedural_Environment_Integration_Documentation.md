@@ -68,27 +68,27 @@ systems.
 
 The high-level relationship is:
 
-<span dir="rtl"></span> <span dir="rtl"></span>Terrain / HeightField
+              Terrain/Heightfield
 
-<span dir="rtl"></span> <span dir="rtl"></span> ↓
+                       ↓
 
-<span dir="rtl"></span> Road
+                     Road
 
-┌──────────────────────┐
+            ┌──────────────────────┐
 
-↓ ↓
+            ↓                      ↓
 
-Road Geometry Modified Terrain
+      Road Geometry         Modified Terrain
 
-└──────────┬───────────┘
+            └──────────┬───────────┘
 
-↓
+                       ↓
 
-Scatter → Integrated Environment
+      Scatter → Integrated Environment
+    
+         ↑
 
-↑
-
-Rock Generator
+    Rock Generator
 
 The **Road** system uses the **Road Curve** and Terrain to generate
 **Road Geometry** and modify the shared terrain.
@@ -172,13 +172,13 @@ provided to Scatter.
 
 The conversion chain is:
 
-Modified HeightField\
-↓\
-HeightField-to-Mesh Conversion\
-↓\
-Terrain Geometry\
-↓\
-Scatter Terrain Input
+        Modified HeightField
+                 ↓
+    HeightField-to-Mesh Conversion
+                 ↓
+          Terrain Geometry
+                 ↓
+      Scatter Terrain Input
 
 **Terrain Geometry is the mesh representation of the terrain used by
 downstream mesh-based systems such as Scatter.**
@@ -194,27 +194,20 @@ Geometry** and modify the shared **HeightField**.
 
 The Road workflow is:
 
-Road Curve
+                          Road Curve
+                              ↓
+                        Road Geometry
+                              ↓
 
-<span dir="rtl"></span> <span dir="rtl"></span> ↓
-
-<span dir="rtl"></span>Road Geometry
-
-<span dir="rtl"></span> <span dir="rtl"></span> ↓
-
-┌──────────────────────┐
-
-↓ ↓
-
-Road Falloff Mask Road Influence Masks
-
-↓ ↓
-
-Final Road Terrain Modification
-
-↓
-
-Modified Terrain
+                 ┌────────────┴────────────┐
+                 ↓                         ↓
+        Road Falloff Mask          Road Influence Masks
+                 │                         │
+                 └────────────┬────────────┘
+                              ↓
+                 Final Road Terrain Modification
+                              ↓
+                      Modified Terrain
 
 **Final Road**, **Road Geometry**, and **Road Mesh** refer to the same
 output. **Road Geometry** is the preferred term within the workflow,
@@ -274,19 +267,13 @@ from the **Rock Generator**.
 
 The scatter workflow is:
 
-Road Masks
-
-↓
-
-Density / Placement Rules
-
-↓
-
-4 Scatter Layers
-
-↓
-
-Rock Distribution
+            Road Masks
+                ↓
+      Density / Placement Rules
+                ↓
+         4 Scatter Layers
+                ↓   
+        Rock Distribution
 
 **Scatter Layers**
 
@@ -403,14 +390,15 @@ layers representing the relationship between the terrain, optional water
 and erosion data, Road, road-adjacent Scatter distribution, and rock
 distribution.
 
-**Terrain / HeightField**\
-↓\
-**Water / Erosion Features**\
-↓\
-**Road**\
-↓\
-**Road-Edge / Dirt Zone**\
-↓\
+     Terrain / HeightField
+              ↓
+    Water / Erosion Features
+              ↓
+            Road
+              ↓
+    Road-Edge / Dirt Zone
+              ↓
+              
 **Rock Distribution**
 
 This sequence represents **conceptual environmental layering**, not a
