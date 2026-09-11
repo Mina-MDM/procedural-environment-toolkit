@@ -4,12 +4,7 @@ A collection of procedural environment tools and experiments developed in Houdin
 
 The repository explores procedural modeling, attribute-driven workflows, surface distribution, curve-based generation, and the integration of individual tools into a small procedural environment.
 
-<!-- IMAGE: HERO
-Add a wide overview image here showing the Mini Environment and/or the three main tools.
-Recommended: 1600–2000 px wide.
-Example:
-![Procedural Mini Environment Overview](images/hero.jpg)
--->
+[Procedural Mini Environment Overview](Mini-Environment/Media/node_graph.jpg)
 
 ## Projects
 
@@ -25,14 +20,9 @@ A procedural rock generation tool focused on controllable shape variation and la
 - Seed-based variation
 - HDA parameterization
 
-<!-- IMAGE: ROCK PREVIEW
-Add a representative image or GIF of the Rock Generator here.
+[Rock Generator](Rock-Generator/Example/Example.jpg)
 
-Example:
-![Rock Generator](images/rock-generator.jpg)
--->
-
-[View Rock Generator →](./rock-generator)
+[View Rock Generator →](./Rock-Generator)
 
 ---
 
@@ -48,14 +38,9 @@ A procedural surface scattering tool designed to distribute geometry based on su
 - Scale and orientation variation
 - Surface-aware scattering
 
-<!-- IMAGE: SCATTER PREVIEW
-Add a representative image or GIF of the Surface Scatter tool here.
+[Surface Scatter](Surface-Scatter/Example/mask_driven.jpg)
 
-Example:
-![Surface Scatter](images/surface-scatter.gif)
--->
-
-[View Surface Scatter →](./surface-scatter)
+[View Surface Scatter →](./Surface-Scatter)
 
 ---
 
@@ -71,14 +56,9 @@ A curve-based procedural road tool for generating road geometry from user-define
 - Curve-based geometry generation
 - Terrain interaction
 
-<!-- IMAGE: ROAD PREVIEW
-Add a representative image or GIF of the Curved Base Road tool here.
+[Curved Base Road](Curved-Base-Road/Example/hero.jpg)
 
-Example:
-![Curved Base Road](images/curved-road.jpg)
--->
-
-[View Curved Base Road →](./curved-road)
+[View Curved Base Road →](./Curved-Base-Road)
 
 ---
 
@@ -96,14 +76,11 @@ The purpose of this project is to explore how individual procedural tools can wo
 - Environment assembly
 - Reusable workflows
 
-<!-- IMAGE: MINI ENVIRONMENT PREVIEW
-Add the strongest final view of the Mini Environment here.
 
-Example:
-![Mini Environment](images/mini-environment.jpg)
--->
+[Mini Environment](Mini-Environment/Example/hero-ue.jpg)
 
-[View Mini Environment →](./mini-environment)
+
+[View Mini Environment →](./Mini-Environment)
 
 ---
 
@@ -123,13 +100,6 @@ The main areas explored throughout the projects are:
 
 The projects increase gradually in complexity, moving from isolated procedural tools toward a small integrated environment system.
 
-<!-- IMAGE: LEARNING / WORKFLOW DIAGRAM
-Optional: Add a simple diagram showing the progression from individual tools to the integrated environment.
-
-Example:
-![Learning Progression](images/workflow-diagram.png)
--->
-
 ## Workflow
 
 The general progression of the repository is:
@@ -145,10 +115,6 @@ Tool Integration
           ↓
 Mini Procedural Environment
 ```
-
-<!-- IMAGE: WORKFLOW DIAGRAM
-Optional alternative to the text diagram above.
--->
 
 ## Software
 
