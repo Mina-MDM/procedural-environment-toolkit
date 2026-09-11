@@ -4,7 +4,7 @@ A collection of procedural environment tools and experiments developed in Houdin
 
 The repository explores procedural modeling, attribute-driven workflows, surface distribution, curve-based generation, and the integration of individual tools into a small procedural environment.
 
-[Procedural Mini Environment Overview](./Mini-Environment/Media/node_graph.jpg)
+![Procedural Mini Environment Overview](./Mini-Environment/Media/node_graph.jpg)
 
 ## Projects
 
@@ -20,7 +20,7 @@ A procedural rock generation tool focused on controllable shape variation and la
 - Seed-based variation
 - HDA parameterization
 
-[Rock Generator](/.Rock-Generator/Example/Example.jpg)
+![Rock Generator](/.Rock-Generator/Example/Example.jpg)
 
 [View Rock Generator →](./Rock-Generator)
 
@@ -38,7 +38,7 @@ A procedural surface scattering tool designed to distribute geometry based on su
 - Scale and orientation variation
 - Surface-aware scattering
 
-[Surface Scatter](./Surface-Scatter/Example/mask_driven.jpg)
+![Surface Scatter](./Surface-Scatter/Example/mask_driven.jpg)
 
 [View Surface Scatter →](./Surface-Scatter)
 
@@ -56,7 +56,7 @@ A curve-based procedural road tool for generating road geometry from user-define
 - Curve-based geometry generation
 - Terrain interaction
 
-[Curved Base Road](./Curved-Base-Road/Example/hero.jpg)
+![Curved Base Road](./Curved-Base-Road/Example/hero.jpg)
 
 [View Curved Base Road →](./Curved-Base-Road)
 
@@ -77,7 +77,7 @@ The purpose of this project is to explore how individual procedural tools can wo
 - Reusable workflows
 
 
-[Mini Environment](./Mini-Environment/Example/hero-ue.jpg)
+![Mini Environment](./Mini-Environment/Example/hero-ue.jpg)
 
 
 [View Mini Environment →](./Mini-Environment)
