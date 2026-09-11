@@ -23,6 +23,8 @@ The HDA produces three separate mesh outputs with different polygon densities.
 - Generate multiple reusable rock variations.
 - Support procedural environment workflows.
 
+![Hero](../Example/Example.jpg)
+
 ## Problem Statement
 
 Creating large numbers of natural-looking rock variations for large-scale environments requires manually modeling each asset. This process is time-consuming and increases production effort when a high level of variation is needed.
