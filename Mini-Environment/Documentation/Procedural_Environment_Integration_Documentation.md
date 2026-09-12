@@ -47,6 +47,8 @@ The integration is designed to preserve procedural relationships between
 the tools so that changes to Terrain or Road can propagate through the
 environment generation workflow.
 
+![Hero](./Example/example.jpg)
+
 **Project Goals**
 
 The Procedural Environment Integration project has the following goals:
@@ -65,6 +67,8 @@ The Procedural Environment Integration project has the following goals:
 The procedural environment uses a shared, terrain-driven architecture in
 which **Terrain** provides the foundation for the downstream procedural
 systems.
+
+![Node graph](./Media/node_graph.jpg)
 
 The high-level relationship is:
 
@@ -178,7 +182,7 @@ The conversion chain is:
                  ↓
           Terrain Geometry
                  ↓
-      Scatter Terrain Input
+        Scatter Terrain Input
 
 **Terrain Geometry is the mesh representation of the terrain used by
 downstream mesh-based systems such as Scatter.**
@@ -186,6 +190,8 @@ downstream mesh-based systems such as Scatter.**
 **See:** *Scatter Interaction → Generated Height and Slope Masks*
 
 **Road–Terrain Interaction**
+
+![Road-Terrain interaction](./Media/Road_Interaction.gif)
 
 **Road Generation**
 
@@ -273,7 +279,11 @@ The scatter workflow is:
                 ↓
          4 Scatter Layers
                 ↓   
-        Rock Distribution
+         Rock Distribution
+         
+
+![scatter](./Media/scatter.jpg)
+
 
 **Scatter Layers**
 
@@ -289,6 +299,9 @@ The Scatter Tool contains four scatter layers:
 
 The four layers provide distinct distributions for the environmental
 zones represented by the system.
+
+![Scatter layers](./Media/scatter_layers.gif)
+
 
 **Road and Terrain Data Usage**
 
@@ -355,6 +368,8 @@ Scatter consumes the available rock variants/instances as its instancing
 source.
 
 **See:** *Rock Generator*
+
+![Close up](./Example/closeup.jpg)
 
 **Road–Scatter Interaction**
 
@@ -505,6 +520,8 @@ slope masks, custom masks, rock variants/instances</td>
 **See: *Terrain System*, *Road–Terrain Interaction*, *Scatter
 Interaction*, and *Road–Scatter Interaction*.**
 
+![Breakdown](./Media/breakdown.gif)
+
 **Technical Implementation**
 
 The procedural environment integration uses the following technical
@@ -594,18 +611,27 @@ The final result is documented through the following views:
 
 - **Full Environment** — Shows the integrated procedural terrain, Road,
   and rock distribution system.
+  
+![Full environment](./Media/hero.jpg)
+
 
 - **Terrain + Road Interaction** — Shows the Modified HeightField and
   Road Geometry generated from the same Road Curve.
 
+![Terrain + Road Interaction](./Media/hero2.jpg)  
+
+
 - **Close-Up Road/Terrain** — Shows the relationship between the road
   surface, modified terrain, and roadside transition zone.
 
+![Close-Up Road/Terrain](./Media/road_closeup.jpg)
+
+
 - **Scatter Distribution** — Shows mask-driven rock and gravel placement
   across different environmental zones.
+  
+![Scatter Distribution](./Media/scatter-layers)
 
-- **Mask Visualization** — Shows the procedural masks driving Road
-  interaction and Scatter distribution.
 
 **What I Learned**
 
@@ -683,6 +709,11 @@ Road modification.
 **Scattered Instances** contains the merged output of the four Scatter
 layers.
 
+![Parameters](./Media/parameters.jpg)
+
+![Parameters](./Media/parameters2.jpg)
+
+
 **Procedural Masks**
 
 Procedural Masks is a conceptual grouping of separate mask outputs used
@@ -725,6 +756,8 @@ The Procedural Environment Integration was tested with:
 
 The system integrates procedural terrain modification, road generation,
 and environment scattering into a single Houdini-to-Unreal workflow.
+
+![Integration](./Media/integration.gif)
 
 The terrain is processed as a HeightField and can be modified by the
 road system before being used as the final terrain output. Road geometry
