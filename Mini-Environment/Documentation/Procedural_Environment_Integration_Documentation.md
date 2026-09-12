@@ -630,7 +630,7 @@ The final result is documented through the following views:
 - **Scatter Distribution** — Shows mask-driven rock and gravel placement
   across different environmental zones.
   
-![Scatter Distribution](../Media/scatter-layers)
+![Scatter Distribution](../Media/scatter-layers.jpg)
 
 
 **What I Learned**
