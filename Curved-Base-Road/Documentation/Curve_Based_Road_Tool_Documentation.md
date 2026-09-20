@@ -61,6 +61,8 @@ procedural variation.
 
 - Support road generation from artist-defined curve inputs.
 
+![Hero](../Example/hero.jpg)
+
 **Problem Statement**
 
 Manually creating roads across terrain requires repeated modeling and
@@ -106,6 +108,8 @@ controls for adjusting road generation and terrain modification.
 The Curve-Based Road Tool follows a procedural pipeline for generating a
 road from an input curve and modifying the input voxel-based terrain to
 create a road imprint.
+
+![Workflow](../Media/node_graph.jpg)
 
 Curve INPUT Terrain INPUT
 
@@ -160,6 +164,8 @@ Bidirectional Ray Projection → Curve Frame Generation → Road Edge
 Generation → Edge Construction → Road Surface Construction → Road
 Falloff Mask → Ray 2 → Ray 3 → Final Road Cleanup → Terrain Offset →
 Road Output**
+
+![Road Construction](../Media/road_construction.jpg)
 
 **Curve Input**\
 Defines the road path used for procedural road generation.
@@ -216,12 +222,16 @@ surface normal.
 **Road Output**\
 Outputs the final generated road mesh.
 
+![Road Construction Breakdown](../Media/Road_Breakdown.gif)
+
 **Terrain Modification**
 
 **Terrain Input → Normal → Ray 1 — Bidirectional Ray Projection →
 Primary Road Mask → Primary Blur & Carve → Ray 2 → Secondary Blur &
 Carve → Ray 3 — Final Road Reprojection → Edge Zone Mask → Terrain
 Output**
+
+![Terrain Modification](../Media/terrain_modification.jpg)
 
 **Terrain Input**\
 Provides the voxel-based terrain used for road projection and terrain
@@ -258,6 +268,8 @@ Generates an edge zone mask on the modified terrain.
 **Terrain Output**\
 Outputs the modified voxel-based terrain with the generated road
 imprint.
+
+![Terrain Modification Breakdown](../Media/terrain_Breakdown.gif)
 
 **Installation**
 
@@ -299,6 +311,8 @@ voxel-based terrain.
 >
 > \`road_falloff\` — The road falloff mask.
 
+![Road Geometry](../Media/road_geo.jpg)
+
 - **Terrain Output**
 
 > Outputs the modified voxel-based terrain with the generated road
@@ -308,11 +322,18 @@ voxel-based terrain.
 >
 > \`edge_zone\` — The edge zone mask on the terrain.
 
+![Terrain](../Media/terrain_modi.gif)
+
 **Parameters**
 
 The Curve-Based Road Tool exposes parameters for controlling road width,
 terrain projection, road falloff, terrain imprinting, edge zone
 generation, and mask visualization.
+
+![Parameters](../Media/parameters1.jpg)
+
+![Parameters](../Media/Parameters.gif)
+
 
 **Road**
 
@@ -351,6 +372,8 @@ Controls the remapping curve applied to the generated road falloff
 mask.\
 **See**: *Generation Process → Road Falloff Mask.*
 
+![Falloff Mask Ramp](../Media/Road_Falloff.gif)
+
 **Mask Visualization**\
 Selects the mask to visualize in the Houdini viewport
 <span dir="rtl"></span>and unreal engine.
@@ -388,6 +411,8 @@ Controls the amount of blur applied to the edge zone mask.\
 
 **Voxel Layer Visualization**\
 Selects the voxel layer to visualize in the Houdini viewport.
+
+![Edge Zone](../Media/edge_zone_visu.gif)
 
 **Generation Process**
 
@@ -433,6 +458,8 @@ surface and the projected input curve. The mask is blurred and
 normalized to define the falloff from the road center toward its outer
 edges.
 
+![Road Falloff Mask](../Example/ue_faalloffmask.jpg)
+
 **Primary Road Mask**
 
 A primary road mask is generated on the terrain from the generated road
@@ -473,10 +500,13 @@ along the road curve.
 The outer and inner extents and the blur of the mask are controlled by
 the corresponding Edge Zone Mask parameters<span dir="rtl">.</span>
 
+![Edge Zone Mask](../Media/edge_zone.gif)
+
 **Final Road Cleanup**
 
 The generated road geometry is cleaned and prepared for the final road
 output.
+
 
 **Outputs**
 
