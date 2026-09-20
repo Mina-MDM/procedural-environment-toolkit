@@ -111,6 +111,9 @@ Point Processing → Instance Generation → Output**
 
 **See:** *Generation Process*
 
+![Node Graph](../Media/node_graph.jpg)
+
+
 **1. Input Mesh**
 
 Receives the polygonal mesh surface used for scatter generation.
@@ -173,6 +176,8 @@ The Procedural Surface Scatter tool accepts the following inputs:
 
 **See:** *Parameters → Instance Parameters → Instance Geometry*
 
+![Instance Geometry Input](../Media/Instance_Geometry.gif)
+
 **Outputs**
 
 The Procedural Surface Scatter tool generates the following outputs:
@@ -185,6 +190,9 @@ The Procedural Surface Scatter tool generates the following outputs:
 
 > **See:** *Parameters → Output Parameters*
 
+![Before After](../Media/Before_After.gif)
+
+
 **Parameters**
 
 The Procedural Surface Scatter tool provides user-controlled parameters
@@ -192,6 +200,9 @@ for configuring instance inputs, distribution, procedural variation,
 mask computation, clustering, and output generation.
 
 **See:** *Generation Process*
+
+![Parameters](../Media/parameters1.jpg)
+
 
 **Instance Parameters**
 
@@ -229,6 +240,8 @@ Remaps the distribution mask to control the final scatter density. The
 remapped result is stored as the **density_mask** attribute used by the
 Scatter node for point generation. The ramp uses a **0–1** range.
 
+![Distribution Parameters](../Media/Distribution_Parameters.gif)
+
 **Variation Parameters**
 
 **Global Seed**
@@ -237,6 +250,8 @@ Controls the seed used for procedural randomization, including instance
 selection, scale variation, and cluster generation. Changing the seed
 produces different procedural variations while preserving the same
 parameter settings.
+
+![Seed](../Media/Seed.gif)
 
 **Global Instance Scale**
 
@@ -251,6 +266,8 @@ distribution.
 
 Modulates instance scale based on the local surface slope using a
 user-defined ramp.
+
+![Scale](../Media/Point_Processing.gif)
 
 **Procedural Mask Parameters**
 
@@ -282,9 +299,13 @@ optional; missing attributes are ignored.
 
 Remaps the height-based distribution mask.
 
+![height_mask.jpg](../Media/height_mask.jpg)
+
 **Slope Ramp Mask**
 
 Remaps the slope-based distribution mask.
+
+![Slope Mask](../Media/slope_mask.jpg)
 
 **Cluster Parameters**
 
@@ -297,6 +318,8 @@ Enables clustered scatter generation using Perlin noise.
 Controls the Perlin noise element size used to generate the cluster
 distribution. The parameter has a UI range of **0–10**.
 
+![Cluster](../Media/Cluster.gif)
+
 **Advanced Parameters**
 
 **Maximum Neighbors**
@@ -308,6 +331,9 @@ during neighbor-based point filtering.
 
 Defines the radius used to search for neighboring scatter points. The
 filtering proximity threshold is derived from this value.
+
+![Neighbor Search Radius](../Media/Neighbor_Search_Radius.gif)
+
 
 **Surface Offset**
 
@@ -333,6 +359,9 @@ distributions.
 
 **See:** *Parameters*
 
+![Break Down](../Media/Break_down.gif)
+
+
 **Surface Analysis**
 
 The input mesh is processed to compute surface normals. These normals
@@ -350,6 +379,8 @@ relative to the input mesh bounding box.
 
 These height-, slope-, and edge-based masks are combined to produce the
 base distribution mask.
+
+![Mask Computation](../Media/Full_Mask_Computation.gif)
 
 **Custom Mask Processing**
 
@@ -377,6 +408,9 @@ and used by the Scatter node to generate points.
 
 Scatter points are generated across the input mesh using the computed
 density distribution.
+
+![Point Distribution](../Media/Point_Distribution.gif)
+
 
 **Neighbor-Based Point Filtering**
 
@@ -410,6 +444,8 @@ maintain correct placement relative to the surface.
 Scatter points are offset along the surface normal to control the
 placement of generated instances relative to the input mesh.
 
+![Point Processing](../Media/Point_Processing.gif)
+
 **Instance Generation**
 
 The selected instance geometry is copied onto the generated scatter
@@ -430,9 +466,14 @@ directly in Houdini. The selected mask can also be visualized in Unreal
 Engine using the Mask Visualization Material, providing a consistent way
 to inspect and validate mask output during engine integration.
 
+![Density Mask](../Media/density_mask.jpg)
+
+
 **Examples**
 
 **Example 1 – Basic Surface Scatter**
+
+![Basic Surface Scatter](../Example/basic_scatter.jpg)
 
 Scatter instances across a polygonal mesh using **Density Scale**,
 **Density Falloff Ramp**, and **Global Instance Scale**.
@@ -443,6 +484,10 @@ Scatter instances across a polygonal mesh using **Density Scale**,
 
 **Example 2 – Mask-Driven Scatter**
 
+![Mask-Driven Scatter](../Example/mask_driven.jpg)
+
+![Mask-Driven Scatter](../Example/mask_driven2.jpg)
+
 Control instance distribution using **Height Ramp Mask**, **Slope Ramp
 Mask**, **Edge Exclusion Distance**, **Custom Mask Attribute**, and
 **Custom Exclusion Mask**.
@@ -451,17 +496,16 @@ Mask**, **Edge Exclusion Distance**, **Custom Mask Attribute**, and
 
 **Example 3 – Clustered Scatter**
 
+**Cluster Off:**
+![Cluster Off](../Example/clusteroff.jpg)
+
+**Cluster On:**
+![Cluster On](../Example/clusteron.jpg)
+
 Generate clustered distributions using **Enable Cluster Distribution**
 and **Cluster Size**.
 
 **See:** *Parameters → Cluster Parameters*
-
-**Example 4 – Neighbor-Based Spacing**
-
-Control the spacing between generated instances using **Maximum
-Neighbors** and **Neighbor Search Radius.**
-
-**See:** *Parameters → Advanced Parameters*
 
 **Performance (Pending)**
 
@@ -511,9 +555,16 @@ The following features have been successfully validated:
 
 - Optional input mesh output.
 
+![ue Integration](../Media/ue_integration.jpg)
+
+
 Mask attributes were also visualized in Unreal using the provided Mask
 Visualization Material to verify the generated mask values after Houdini
 Engine cooking.
+
+![Compare](../Media/ue_hou.jpg)
+
+![Compare](../Media/ue_hou2.jpg)
 
 **Mask Visualization Material**\
 Specifies the material used to visualize the selected mask in Unreal
