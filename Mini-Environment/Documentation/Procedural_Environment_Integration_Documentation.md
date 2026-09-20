@@ -300,6 +300,9 @@ The Scatter Tool contains four scatter layers:
 The four layers provide distinct distributions for the environmental
 zones represented by the system.
 
+![scatter Masks](../Media/scatter-masks.jpg)
+
+
 ![Scatter layers](../Media/scatter_layers.gif)
 
 
